@@ -1,0 +1,67 @@
+
+{
+    "name": "Instance 1",
+    "turn": 1,
+    
+    "players": [
+        {
+            "name": "Jimmy",
+            "points": 0,
+            "position": "General",
+            "modifiers": [],
+            "faction": "NATO",
+            "allocations": [
+                {
+                    "attack": 0,
+                    "defense": 0,
+                    "save": 0
+                }
+            ]
+        },
+        {
+            "name": "Jack",
+            "points": 0,
+            "position": "commander",
+            "modifiers": [],
+            "faction": "NATO",
+            "allocations": {}
+        },
+        {
+            "name": "James",
+            "points": 0,
+            "position": "commander",
+            "modifiers": [],
+            "faction": "NATO",
+            "allocations": {}
+        },{
+            "name": "Jones",
+            "points": 0,
+            "position": "General",
+            "modifiers": [],
+            "faction": "PACT",
+            "allocations": {}
+        },
+        {
+            "name": "Jake",
+            "points": 0,
+            "position": "commander",
+            "modifiers": [],
+            "faction": "PACT",
+            "allocations": {}
+        },
+        {
+            "name": "Jill",
+            "points": 0,
+            "position": "commander",
+            "modifiers": [],
+            "faction": "PACT",
+            "allocations": {}
+        }
+    ],
+
+    "sectors": {
+        "alpha": {},
+
+        "bravo": {}
+    }
+}
