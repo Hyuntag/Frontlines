@@ -12,8 +12,7 @@
             "faction": "NATO",
             "allocations": [
                 {
-                    "attack": 0,
-                    "defense": 0,
+                    "commanders": {},
                     "save": 0
                 }
             ]
@@ -60,8 +59,14 @@
     ],
 
     "sectors": {
-        "alpha": {},
+        "alpha": {
+            "pace": 0,
+            "win": 3
+        },
 
-        "bravo": {}
+        "bravo": {
+            "pace": 0,
+            "win": 3
+        }
     }
 }

@@ -8,6 +8,7 @@ from objects import Instance;
 
 
 # Global mutatable values (these values will be mutated globally; BEWARE!)
+# Should not be written to except start or end of program
 instanceRaw = None;
 instanceJson: object = {};
 instance: Instance;
@@ -42,18 +43,13 @@ if selected == 1:
     # Serialise
     instance = Instance(instanceJson);
 
+
 elif selected == 2:
     print("Importing file...");
 
+
 elif selected == 3:
     print("Creating new instance...");
-
-
-
-# DEBUG
-print(instanceRaw);
-print(instanceJson["name"]);
-print(instance.name);
 
 
 

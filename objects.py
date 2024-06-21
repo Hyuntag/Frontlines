@@ -15,6 +15,20 @@ class Player:
         self.faction:       str = player["faction"];
         self.allocations:   list[object] = player["allocations"];
 
+    def toJson(self) -> object:
+        return {
+            "name": self.name,
+            "points": self.points,
+            "position": self.position,
+            "faction": self.faction,
+            "allocation": self.allocations
+        };
+
+
+class Sector:
+    def __init__(self) -> None:
+        pass
+
 
 
 class Instance:
@@ -24,3 +38,8 @@ class Instance:
         self.players: list[Player] = [];
         for player in instance["players"]:
             self.players.append(Player(player));
+
+    def toJson(self) -> object:
+        returnPlayers = [];
+        for returnPlayer in self.players:
+            returnPlayers.append(returnPlayer.toJson());
