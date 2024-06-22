@@ -26,7 +26,8 @@ selected, selected_ = utility.selection(options = [
 # Load Instance
 
 if selected == 1:
-    print("Loading instance...");
+
+    print("\nLoading instance...\n");
 
     # Selection for which file to open
     selectedIndex, selectedFileName = utility.selection(
@@ -45,20 +46,57 @@ if selected == 1:
 
 
 elif selected == 2:
-    print("Importing file...");
+
+    print("\nImporting file...\n");
 
 
 elif selected == 3:
-    print("Creating new instance...");
+
+    print("\nCreating new instance...\n");
 
 
+print("\nInitialising the game...\n");
 
 # GAME LIFECYCLE
 while True:
     
     # General Points
+    for general in instance.players:
 
-    # General Allocations
+        # Check if the player is a general
+        if general.position != "general":
+            continue;
+
+        # Give general points + saved
+        general.allocations.append({
+            "available": [ 9, general.points ]
+        });
+    
+        # Notification
+        generalPoints = general.allocations[-1]["available"][0];
+        generalSaved = general.allocations[-1]["available"][1];
+        print(f"The general {general.name} has been allocated {generalPoints} + {generalSaved}");
+        print("Please allocate these points to the respective commanders: ");
+
+        # Compile a list of available commanders
+        commanders = [];
+        for commander in instance.players:
+
+            # Check if player is a commander
+            if commander.position != "commander":
+                continue;
+            
+            # Check if player is same faction
+            if commander.faction != general.faction:
+                continue;
+    
+            # Append
+            commanders.append(commander.name);
+    
+        # Selection
+        allocated = utility.allocations(f"You have recieved {generalPoints} + {generalSaved} Resource Points to spend: ", commanders, generalPoints + generalSaved);
+        print(allocated);
+
 
     # Nuclear Win Condition
 

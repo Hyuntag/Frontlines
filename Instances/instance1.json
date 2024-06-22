@@ -7,11 +7,12 @@
         {
             "name": "Jimmy",
             "points": 0,
-            "position": "General",
+            "position": "general",
             "modifiers": [],
             "faction": "NATO",
             "allocations": [
                 {
+                    "available": [],
                     "commanders": {},
                     "save": 0
                 }
@@ -23,7 +24,7 @@
             "position": "commander",
             "modifiers": [],
             "faction": "NATO",
-            "allocations": {}
+            "allocations": []
         },
         {
             "name": "James",
@@ -35,10 +36,10 @@
         },{
             "name": "Jones",
             "points": 0,
-            "position": "General",
+            "position": "general",
             "modifiers": [],
             "faction": "PACT",
-            "allocations": {}
+            "allocations": []
         },
         {
             "name": "Jake",
@@ -46,7 +47,7 @@
             "position": "commander",
             "modifiers": [],
             "faction": "PACT",
-            "allocations": {}
+            "allocations": []
         },
         {
             "name": "Jill",
@@ -54,19 +55,19 @@
             "position": "commander",
             "modifiers": [],
             "faction": "PACT",
-            "allocations": {}
+            "allocations": []
         }
     ],
 
-    "sectors": {
-        "alpha": {
+    "sectors": [
+        {
             "pace": 0,
             "win": 3
         },
 
-        "bravo": {
+        {
             "pace": 0,
             "win": 3
         }
-    }
+    ]
 }
