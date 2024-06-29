@@ -6,7 +6,7 @@ import utility;
 from objects import Instance;
 
 
-
+# "saved" IS A PROTECTED KEYWORD IS ALL SCENARIOS UNLESS IN INTERNAL USAGE
 # Global mutatable values (these values will be mutated globally; BEWARE!)
 # Should not be written to except start or end of program
 instanceRaw = None;
@@ -94,11 +94,20 @@ while True:
             commanders.append(commander.name);
     
         # Selection
-        allocated = utility.allocations(f"You have recieved {generalPoints} + {generalSaved} Resource Points to spend: ", commanders, generalPoints + generalSaved);
-        print(allocated);
+        allocation = utility.allocations(f"You have recieved {generalPoints} + {generalSaved} Resource Points to spend: ", commanders, generalPoints + generalSaved);
+        
+        # Apply Allocations
+        for name, allocated in allocation.items():
+            general.allocations[-1][name] = allocated;
+        general.points = allocation["saved"];
+    
 
+    # General Abilities
+    abilities = utility.spend(options=[
+        [ "The Nuclear Option",  ],
+        [ "The Test Option" ]
+    ]);
 
-    # Nuclear Win Condition
 
     # Commander Points
 
